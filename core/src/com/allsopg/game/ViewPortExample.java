@@ -2,7 +2,9 @@ package com.allsopg.game;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.InputProcessor;
+import com.badlogic.gdx.Input;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -14,7 +16,8 @@ import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
-public class ViewPortExample implements ApplicationListener, InputProcessor {
+public class ViewPortExample implements ApplicationListener {
+    static final Color BACKGROUND_COLOR = new Color(1,1,1,1);
     private static final float MIN_SCENE_WIDTH = 800.0f;
     private static final float MIN_SCENE_HEIGHT = 600.0f;
     private static final float MAX_SCENE_WIDTH = 1280.0f;
@@ -32,52 +35,9 @@ public class ViewPortExample implements ApplicationListener, InputProcessor {
     public void create() {
         camera = new OrthographicCamera();
         batch = new SpriteBatch();
-        background = new Texture(Gdx.files.internal("data/menu.png"));
+        background = new Texture(Gdx.files.internal("data/space.jpg"));
         createViewports();
         selectNextViewport();
-    }
-
-    @Override
-    public boolean keyDown(int keycode) {
-        return false;
-    }
-
-    @Override
-    public boolean keyUp(int keycode) {
-        return false;
-    }
-
-    @Override
-    public boolean keyTyped(char character) {
-        return false;
-    }
-
-    @Override
-    public boolean touchDown (int screenX, int screenY, int pointer, int
-            button) {
-
-        selectNextViewport();
-        return true;
-    }
-
-    @Override
-    public boolean touchUp(int screenX, int screenY, int pointer, int button) {
-        return false;
-    }
-
-    @Override
-    public boolean touchDragged(int screenX, int screenY, int pointer) {
-        return false;
-    }
-
-    @Override
-    public boolean mouseMoved(int screenX, int screenY) {
-        return false;
-    }
-
-    @Override
-    public boolean scrolled(int amount) {
-        return false;
     }
 
     private void selectNextViewport() {
@@ -108,7 +68,13 @@ public class ViewPortExample implements ApplicationListener, InputProcessor {
 
     @Override
     public void render() {
+        Gdx.gl.glClearColor(BACKGROUND_COLOR.r, BACKGROUND_COLOR.g,
+                BACKGROUND_COLOR.b,BACKGROUND_COLOR.a);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         batch.setProjectionMatrix(camera.combined);
+        if(Gdx.input.isButtonPressed(Input.Buttons.LEFT)){
+            selectNextViewport();
+        }
         batch.begin();
         batch.draw(background, -background.getWidth() * 0.5f, -background.
                 getHeight() * 0.5f);

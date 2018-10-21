@@ -28,7 +28,6 @@ public class BasicAnimation implements ApplicationListener {
     TextureAtlas atlas;
 
     static final float FRAME_DURATION = 1.0f / 30.0f;
-    private static final float PPM = 2;
     private static final float SCENE_WIDTH = 12.80f;
     private static final float SCENE_HEIGHT = 7.20f;
 
