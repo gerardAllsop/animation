@@ -15,22 +15,24 @@ import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import java.util.Comparator;
 
 public class BasicAnimation implements ApplicationListener {
-    static final Color BACKGROUND_COLOR = new Color(0,0,0,1);
-    static final float FRAME_DURATION = 1.0f/30.0f;
-    SpriteBatch batch;
-    ScreenViewport viewport;
-    TextureAtlas atlas;
-    Animation aniSaw;
-    float animationTime;
+    private static final Color
+            BACKGROUND_COLOR = new Color(1,1,1,1);
+    private static final float FRAME_DURATION = 1.0f/30.0f;
+
+    private SpriteBatch batch;
+
+    private Animation aniSaw;
+    private float animationTime;
 
 
     @Override
     public void create() {
-        viewport = new ScreenViewport();
+        ScreenViewport viewport = new ScreenViewport();
         viewport.update(Gdx.graphics.getWidth(),
                 Gdx.graphics.getHeight());
+
         batch = new SpriteBatch();
-        atlas = new TextureAtlas(Gdx.files.internal(
+        TextureAtlas atlas = new TextureAtlas(Gdx.files.internal(
                 "texture_atlas/saw_assets.atlas"));
 
         //load animations
@@ -46,32 +48,16 @@ public class BasicAnimation implements ApplicationListener {
         Gdx.gl.glClearColor(BACKGROUND_COLOR.r,BACKGROUND_COLOR.g,
                 BACKGROUND_COLOR.b,BACKGROUND_COLOR.a);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
         animationTime += Gdx.graphics.getDeltaTime();
+        TextureRegion sawFrame = (TextureRegion)
+                aniSaw.getKeyFrame(animationTime);
+
         batch.begin();
-        TextureRegion sawFrame = (TextureRegion) aniSaw.getKeyFrame(animationTime);
         batch.draw(sawFrame,100,100);
         batch.end();
     }
 
-    @Override
-    public void resize(int width, int height) {
-
-    }
-
-    @Override
-    public void pause() {
-
-    }
-
-    @Override
-    public void resume() {
-
-    }
-
-    @Override
-    public void dispose() {
-
-    }
 
     private static class RegionComparator implements
             Comparator<TextureAtlas.AtlasRegion>{
@@ -81,4 +67,13 @@ public class BasicAnimation implements ApplicationListener {
             return region_1.name.compareTo(region_2.name);
         }
     }
+
+    @Override
+    public void resize(int width, int height) {}
+    @Override
+    public void pause() {}
+    @Override
+    public void resume() {}
+    @Override
+    public void dispose() {}
 }
