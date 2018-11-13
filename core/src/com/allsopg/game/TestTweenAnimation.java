@@ -8,13 +8,14 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 
+import utility.Constants;
 import utility.UniversalResource;
 
+import static utility.Constants.BACKGROUND_COLOR;
+
 public class TestTweenAnimation implements ApplicationListener {
-    static final Color BACKGROUND_COLOR = new Color(0,0,0,1);
     private SpriteBatch batch;
     private float animationTime;
-    private static final String size = "data/mediumSize.png";
     BonusSprite bp;
     private ScreenViewport viewport;
 
@@ -22,15 +23,10 @@ public class TestTweenAnimation implements ApplicationListener {
     public void create() {
         viewport = new ScreenViewport();
         batch = new SpriteBatch();
-        bp = new BonusSprite("texture_atlas/saw_assets.atlas",
+        bp = new BonusSprite(Constants.SAW_ATLAS,
                 new Vector2(100,100),
-                size);
+                Constants.SIZE);
        bp.startupRoutine();
-    }
-
-    @Override
-    public void resize(int width, int height) {
-
     }
 
     @Override
@@ -48,17 +44,11 @@ public class TestTweenAnimation implements ApplicationListener {
     }
 
     @Override
-    public void pause() {
-
-    }
-
+    public void pause() {}
     @Override
-    public void resume() {
-
-    }
-
+    public void resume() {}
     @Override
-    public void dispose() {
-
-    }
+    public void dispose() {}
+    @Override
+    public void resize(int width, int height) {}
 }
