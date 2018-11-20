@@ -45,10 +45,6 @@ public class SpriteExample_3 extends InputAdapter implements ApplicationListener
 
     @Override
     public boolean touchDown (int screenX, int screenY, int pointer, int button) {
-        if (button == Input.Buttons.LEFT){
-            sprSaw.updatePosition(new Vector2(Gdx.input.getX(),
-                    Gdx.graphics.getHeight() - Gdx.input.getY()));
-        }
         return true;
     }
 

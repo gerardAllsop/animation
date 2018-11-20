@@ -17,7 +17,7 @@ public class TweenDataAccessor implements TweenAccessor<TweenData> {
             case TYPE_POS:
                 returnValues[0] = target.getXY().x;
                 returnValues[1] = target.getXY().y;
-                return 1;
+                return 2;
             case TYPE_SCALE:
                 returnValues[0] = target.getScale();
                 return 2;

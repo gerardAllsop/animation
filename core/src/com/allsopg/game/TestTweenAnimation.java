@@ -23,8 +23,8 @@ public class TestTweenAnimation implements ApplicationListener {
     public void create() {
         viewport = new ScreenViewport();
         batch = new SpriteBatch();
-        bp = new BonusSprite(Constants.SAW_ATLAS,
-                new Vector2(100,100),
+        bp = new BonusSprite(Constants.BALL_ATLAS,
+                new Vector2(400,300),
                 Constants.SIZE);
        bp.startupRoutine();
     }

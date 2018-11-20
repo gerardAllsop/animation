@@ -19,9 +19,6 @@ public class AnimatedSprite extends Sprite {
     TextureAtlas atlas;
     Animation animation;
     Vector2 position;
-    boolean moved=false;
-
-
 
     public AnimatedSprite(String atlasString,Vector2 position,String size){
         super(new Texture(size));
@@ -33,24 +30,19 @@ public class AnimatedSprite extends Sprite {
         Array<TextureAtlas.AtlasRegion> regions = new
                 Array<TextureAtlas.AtlasRegion>(atlas.getRegions());
         regions.sort(new RegionComparator());
-        animation = new Animation(FRAME_DURATION,regions,Animation.PlayMode.LOOP);
+        animation = new Animation(FRAME_DURATION,regions,Animation.PlayMode.NORMAL);
+    }
+
+
+    public void setAnimation(Animation.PlayMode mode){
+         animation.setPlayMode(mode);
     }
 
     public void update(float deltaTime){
-        //update animation
-        this.setRegion(
-                (TextureRegion) animation.getKeyFrame(deltaTime));
-        //update position
-        if(moved) {
-            this.setX(this.position.x);
-            this.setY(this.position.y);
-        }
+            this.setRegion(
+                    (TextureRegion) animation.getKeyFrame(deltaTime));
     }
 
-    public void updatePosition(Vector2 position){
-        this.position = position;
-        moved = true;
-    }
 
     private static class RegionComparator implements Comparator<TextureAtlas.AtlasRegion>{
         @Override

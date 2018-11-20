@@ -4,6 +4,7 @@ import com.allsopg.game.BasicAnimation;
 import com.allsopg.game.SpriteExample;
 import com.allsopg.game.SpriteExample_2;
 import com.allsopg.game.SpriteExample_3;
+import com.allsopg.game.TestTweenAnimation;
 import com.allsopg.game.ViewPortExample;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
@@ -13,11 +14,11 @@ public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config =
 				new LwjglApplicationConfiguration();
-
-		TexturePacker.process("../assets/gfx/imgSaw",
+/*
+		TexturePacker.process("../assets/gfx/ball",
 				"../assets/texture_atlas",
-				"ring_assets");
-
-		new LwjglApplication(new BasicAnimation(), config);
+				"ball_assets");
+*/
+		new LwjglApplication(new TestTweenAnimation(), config);
 	}
 }

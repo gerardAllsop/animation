@@ -14,6 +14,8 @@ import com.badlogic.gdx.utils.viewport.ScreenViewport;
 
 import java.util.Comparator;
 
+import utility.Constants;
+
 public class BasicAnimation implements ApplicationListener {
     private static final Color
             BACKGROUND_COLOR = new Color(1,1,1,1);
@@ -21,7 +23,7 @@ public class BasicAnimation implements ApplicationListener {
 
     private SpriteBatch batch;
 
-    private Animation aniSaw;
+    private Animation ani;
     private float animationTime;
 
 
@@ -33,13 +35,13 @@ public class BasicAnimation implements ApplicationListener {
 
         batch = new SpriteBatch();
         TextureAtlas atlas = new TextureAtlas(Gdx.files.internal(
-                "texture_atlas/saw_assets.atlas"));
+                Constants.BALL_ATLAS));
 
         //load animations
         Array<TextureAtlas.AtlasRegion> sawRegions = new
                 Array<TextureAtlas.AtlasRegion>(atlas.getRegions());
         sawRegions.sort(new RegionComparator());
-        aniSaw = new Animation(FRAME_DURATION,sawRegions,
+        ani = new Animation(FRAME_DURATION,sawRegions,
                 Animation.PlayMode.LOOP);
     }
 
@@ -51,7 +53,7 @@ public class BasicAnimation implements ApplicationListener {
 
         animationTime += Gdx.graphics.getDeltaTime();
         TextureRegion sawFrame = (TextureRegion)
-                aniSaw.getKeyFrame(animationTime);
+                ani.getKeyFrame(animationTime);
 
         batch.begin();
         batch.draw(sawFrame,100,100);

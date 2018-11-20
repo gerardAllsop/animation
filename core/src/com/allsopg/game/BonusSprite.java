@@ -1,8 +1,12 @@
 package com.allsopg.game;
 
+import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.math.Vector2;
 
+import aurelienribon.tweenengine.BaseTween;
+import aurelienribon.tweenengine.Timeline;
 import aurelienribon.tweenengine.Tween;
+import aurelienribon.tweenengine.TweenCallback;
 import aurelienribon.tweenengine.TweenManager;
 import utility.TweenData;
 import utility.TweenDataAccessor;
@@ -38,9 +42,37 @@ public class BonusSprite extends AnimatedSprite{
         this.setRotation(tweenData.getRotation());
     }
 
-    public void startupRoutine(){
-        Tween.to(tweenData, TweenDataAccessor.TYPE_POS,250f)
-                .target(200,100).start(tweenManager).to(tweenData,TweenDataAccessor.TYPE_ROTATION,250f).target(100).start(tweenManager);
+
+    public void closeRoutine(){
+        Tween.to(tweenData, TweenDataAccessor.TYPE_POS,100f)
+                .delay(2000)
+                .target(-250,0).start(tweenManager)
+                .setCallback(new TweenCallback() {
+                    @Override
+                    public void onEvent(int type, BaseTween<?> source) {
+                        setAnimation(Animation.PlayMode.NORMAL);
+                    }
+                })
+                .start(tweenManager);
+    }
+
+    public void startupRoutine(){ ;
+        Timeline.createSequence()
+                .push(Tween.to(tweenData, TweenDataAccessor.TYPE_ROTATION,0f)
+                        .target(90))
+                .pushPause(100)
+                .push(Tween.to(tweenData,TweenDataAccessor.TYPE_ROTATION,10)
+                .target(360))
+                .push(Tween.to(tweenData, TweenDataAccessor.TYPE_POS,75)
+                .target(getX(),0))
+                .setCallback(new TweenCallback() {
+                    @Override
+                    public void onEvent(int type, BaseTween<?> source) {
+                        setAnimation(Animation.PlayMode.LOOP);
+                        closeRoutine();
+                    }
+                })
+                .start(tweenManager);
     }
 
 
