@@ -1,7 +1,10 @@
 package com.allsopg.game;
 
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.math.Vector2;
+
+import java.util.HashMap;
 
 import aurelienribon.tweenengine.BaseTween;
 import aurelienribon.tweenengine.Timeline;
@@ -15,11 +18,13 @@ import utility.UniversalResource;
 public class BonusSprite extends AnimatedSprite{
     private TweenData tweenData;
     private TweenManager tweenManager;
+    private HashMap<String, Sound> myNoises;
 
 
     public BonusSprite(String atlasString, Vector2 position, String size) {
         super(atlasString, position, size);
         initTweenData();
+        myNoises = UniversalResource.getInstance().getNoises();
     }
 
     private void initTweenData(){
@@ -27,7 +32,7 @@ public class BonusSprite extends AnimatedSprite{
         tweenData.setXY(new Vector2(this.getX(),this.getY()));
         tweenData.setColor(this.getColor());
         tweenData.setScale(this.getScaleX());
-        tweenManager = UniversalResource.getInstance().tweenManager;
+        tweenManager = UniversalResource.getInstance().getTweenManager();
     }
 
     private TweenData getTweenData(){return tweenData;}
@@ -51,12 +56,14 @@ public class BonusSprite extends AnimatedSprite{
                     @Override
                     public void onEvent(int type, BaseTween<?> source) {
                         setAnimation(Animation.PlayMode.NORMAL);
+                        myNoises.get("jump").play();
                     }
                 })
                 .start(tweenManager);
     }
 
-    public void startupRoutine(){ ;
+    public void startupRoutine(){
+        myNoises.get("back").play();
         Timeline.createSequence()
                 .push(Tween.to(tweenData, TweenDataAccessor.TYPE_ROTATION,0f)
                         .target(90))
@@ -69,6 +76,7 @@ public class BonusSprite extends AnimatedSprite{
                     @Override
                     public void onEvent(int type, BaseTween<?> source) {
                         setAnimation(Animation.PlayMode.LOOP);
+                        myNoises.get("bounce").play();
                         closeRoutine();
                     }
                 })

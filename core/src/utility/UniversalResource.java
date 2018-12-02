@@ -1,10 +1,16 @@
 package utility;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
+
+import java.util.HashMap;
+
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenManager;
 
 public class UniversalResource {
-    public TweenManager tweenManager;
+    private TweenManager tweenManager;
+    private HashMap<String,Sound> noises;
 
     private static UniversalResource instance;
 
@@ -15,12 +21,30 @@ public class UniversalResource {
         return instance;
     }
 
-    private UniversalResource(){configure();}
+    private UniversalResource(){
+        configureTween();
+        configureSounds();
+    }
 
-    private void configure(){
+    private void configureTween(){
         Tween.setCombinedAttributesLimit(4);
         tweenManager = new TweenManager();
         Tween.registerAccessor(utility.TweenData.class,
                 new utility.TweenDataAccessor());
+    }
+
+    public TweenManager getTweenManager(){
+        return tweenManager;
+    }
+
+    public HashMap getNoises(){
+        return noises;
+    }
+
+    private void configureSounds(){
+        noises = new HashMap<String,Sound>();
+        for(String key : Constants.LEVEL_SOUNDS.keySet()) {
+            noises.put(key,Gdx.audio.newSound(Gdx.files.internal(Constants.LEVEL_SOUNDS.get(key))));
+        }
     }
 }

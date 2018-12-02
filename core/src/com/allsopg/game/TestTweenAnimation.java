@@ -35,7 +35,7 @@ public class TestTweenAnimation implements ApplicationListener {
                 BACKGROUND_COLOR.b,BACKGROUND_COLOR.a);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         animationTime+=Gdx.graphics.getDeltaTime();
-        UniversalResource.getInstance().tweenManager.update(animationTime);
+        UniversalResource.getInstance().getTweenManager().update(animationTime);
         bp.update(animationTime);
         //draw
         batch.begin();

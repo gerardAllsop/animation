@@ -1,6 +1,7 @@
 package com.allsopg.game.desktop;
 
 import com.allsopg.game.BasicAnimation;
+import com.allsopg.game.SoundEffect;
 import com.allsopg.game.SpriteExample;
 import com.allsopg.game.SpriteExample_2;
 import com.allsopg.game.SpriteExample_3;
