@@ -2,6 +2,7 @@ package utility;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 
 import java.util.HashMap;
 
@@ -11,6 +12,8 @@ import aurelienribon.tweenengine.TweenManager;
 public class UniversalResource {
     private TweenManager tweenManager;
     private HashMap<String,Sound> noises;
+    private BitmapFont font;
+    private String screenText ="";
 
     private static UniversalResource instance;
 
@@ -24,6 +27,23 @@ public class UniversalResource {
     private UniversalResource(){
         configureTween();
         configureSounds();
+        configureFont();
+    }
+
+    private void configureFont(){
+        font = new BitmapFont(Gdx.files.internal(Constants.fontPath));
+    }
+
+    public BitmapFont getFont(){
+        return font;
+    }
+
+    public void setScreenText(String txt){
+        screenText = txt;
+    }
+
+    public String getScreenText(){
+        return screenText;
     }
 
     private void configureTween(){
@@ -40,6 +60,7 @@ public class UniversalResource {
     public HashMap getNoises(){
         return noises;
     }
+
 
     private void configureSounds(){
         noises = new HashMap<String,Sound>();

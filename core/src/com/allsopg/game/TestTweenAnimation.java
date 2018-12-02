@@ -4,6 +4,7 @@ import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
@@ -16,7 +17,8 @@ import static utility.Constants.BACKGROUND_COLOR;
 public class TestTweenAnimation implements ApplicationListener {
     private SpriteBatch batch;
     private float animationTime;
-    BonusSprite bp;
+    private BonusSprite bp;
+    private BitmapFont font;
     private ScreenViewport viewport;
 
     @Override
@@ -26,6 +28,8 @@ public class TestTweenAnimation implements ApplicationListener {
         bp = new BonusSprite(Constants.BALL_ATLAS,
                 new Vector2(400,300),
                 Constants.SIZE);
+        font = UniversalResource.getInstance().getFont();
+        UniversalResource.getInstance().setScreenText("Hey, it' bouncey Bob!");
        bp.startupRoutine();
     }
 
@@ -39,6 +43,8 @@ public class TestTweenAnimation implements ApplicationListener {
         bp.update(animationTime);
         //draw
         batch.begin();
+        font.draw(batch,UniversalResource.getInstance().getScreenText(),
+                Gdx.graphics.getWidth()/7,Gdx.graphics.getHeight()/2);
         bp.draw(batch);
         batch.end();
     }

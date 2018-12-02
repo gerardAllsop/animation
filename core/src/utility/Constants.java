@@ -13,6 +13,7 @@ public class Constants {
     public static final String SIZE = "data/smallSize.png";
     public static final String SAW_ATLAS = "texture_atlas/saw_assets.atlas";
     public static final String BALL_ATLAS = "texture_atlas/ball_assets.atlas";
+    public static final String fontPath = "font/chalkduster.fnt";
 
     public static final Map<String, String> LEVEL_SOUNDS =
             Collections.unmodifiableMap(new HashMap<String, String>() {

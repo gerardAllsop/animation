@@ -56,6 +56,7 @@ public class BonusSprite extends AnimatedSprite{
                     @Override
                     public void onEvent(int type, BaseTween<?> source) {
                         setAnimation(Animation.PlayMode.NORMAL);
+                        UniversalResource.getInstance().setScreenText(" Bye Bob!");
                         myNoises.get("jump").play();
                     }
                 })
@@ -76,6 +77,7 @@ public class BonusSprite extends AnimatedSprite{
                     @Override
                     public void onEvent(int type, BaseTween<?> source) {
                         setAnimation(Animation.PlayMode.LOOP);
+                        UniversalResource.getInstance().setScreenText("Do your thing Bob!");
                         myNoises.get("bounce").play();
                         closeRoutine();
                     }
