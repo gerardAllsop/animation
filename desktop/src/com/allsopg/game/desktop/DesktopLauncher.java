@@ -16,9 +16,9 @@ public class DesktopLauncher {
 		LwjglApplicationConfiguration config =
 				new LwjglApplicationConfiguration();
 /*
-		TexturePacker.process("../assets/gfx/ball",
+		TexturePacker.process("../assets/gfx/explode",
 				"../assets/texture_atlas",
-				"ball_assets");
+				"explode_assets");
 */
 		new LwjglApplication(new TestTweenAnimation(), config);
 	}
