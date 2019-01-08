@@ -1,0 +1,409 @@
+
+radioactive_assets.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+radioactive0001
+  rotate: false
+  xy: 2, 806
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0002
+  rotate: false
+  xy: 2, 605
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0003
+  rotate: false
+  xy: 313, 806
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0004
+  rotate: false
+  xy: 2, 404
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0005
+  rotate: false
+  xy: 313, 605
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0006
+  rotate: false
+  xy: 624, 806
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0007
+  rotate: false
+  xy: 2, 203
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0008
+  rotate: false
+  xy: 313, 404
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0009
+  rotate: false
+  xy: 624, 605
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0010
+  rotate: false
+  xy: 2, 2
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0011
+  rotate: false
+  xy: 313, 203
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0012
+  rotate: false
+  xy: 624, 404
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0013
+  rotate: false
+  xy: 313, 2
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0014
+  rotate: false
+  xy: 624, 203
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0015
+  rotate: false
+  xy: 624, 2
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+
+radioactive_assets2.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+radioactive0016
+  rotate: false
+  xy: 2, 806
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0017
+  rotate: false
+  xy: 2, 605
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0018
+  rotate: false
+  xy: 313, 806
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0019
+  rotate: false
+  xy: 2, 404
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0020
+  rotate: false
+  xy: 313, 605
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0021
+  rotate: false
+  xy: 624, 806
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0022
+  rotate: false
+  xy: 2, 203
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0023
+  rotate: false
+  xy: 313, 404
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0024
+  rotate: false
+  xy: 624, 605
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0025
+  rotate: false
+  xy: 2, 2
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0026
+  rotate: false
+  xy: 313, 203
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0027
+  rotate: false
+  xy: 624, 404
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0028
+  rotate: false
+  xy: 313, 2
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0029
+  rotate: false
+  xy: 624, 203
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0030
+  rotate: false
+  xy: 624, 2
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+
+radioactive_assets3.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+radioactive0031
+  rotate: false
+  xy: 2, 806
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0032
+  rotate: false
+  xy: 2, 605
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0033
+  rotate: false
+  xy: 313, 806
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0034
+  rotate: false
+  xy: 2, 404
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0035
+  rotate: false
+  xy: 313, 605
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0036
+  rotate: false
+  xy: 624, 806
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0037
+  rotate: false
+  xy: 2, 203
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0038
+  rotate: false
+  xy: 313, 404
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0039
+  rotate: false
+  xy: 624, 605
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0040
+  rotate: false
+  xy: 2, 2
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0041
+  rotate: false
+  xy: 313, 203
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0042
+  rotate: false
+  xy: 624, 404
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0043
+  rotate: false
+  xy: 313, 2
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0044
+  rotate: false
+  xy: 624, 203
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0045
+  rotate: false
+  xy: 624, 2
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+
+radioactive_assets4.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+radioactive0046
+  rotate: false
+  xy: 2, 806
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0047
+  rotate: false
+  xy: 2, 605
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0048
+  rotate: false
+  xy: 313, 806
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0049
+  rotate: false
+  xy: 2, 404
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0050
+  rotate: false
+  xy: 313, 605
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0051
+  rotate: false
+  xy: 624, 806
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0052
+  rotate: false
+  xy: 2, 203
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0053
+  rotate: false
+  xy: 313, 404
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0054
+  rotate: false
+  xy: 624, 605
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1
+radioactive0055
+  rotate: false
+  xy: 2, 2
+  size: 309, 199
+  orig: 309, 199
+  offset: 0, 0
+  index: -1

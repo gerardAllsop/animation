@@ -1,0 +1,223 @@
+
+ball_assets.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Ball0001
+  rotate: false
+  xy: 2, 719
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0031
+  rotate: false
+  xy: 2, 719
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0002
+  rotate: false
+  xy: 2, 480
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0003
+  rotate: false
+  xy: 113, 719
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0004
+  rotate: false
+  xy: 2, 241
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0005
+  rotate: false
+  xy: 113, 480
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0006
+  rotate: false
+  xy: 224, 719
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0007
+  rotate: false
+  xy: 2, 2
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0008
+  rotate: false
+  xy: 113, 241
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0009
+  rotate: false
+  xy: 224, 480
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0010
+  rotate: false
+  xy: 335, 719
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0011
+  rotate: false
+  xy: 113, 2
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0012
+  rotate: false
+  xy: 224, 241
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0013
+  rotate: false
+  xy: 335, 480
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0014
+  rotate: false
+  xy: 446, 719
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0015
+  rotate: false
+  xy: 224, 2
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0016
+  rotate: false
+  xy: 335, 241
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0017
+  rotate: false
+  xy: 446, 480
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0018
+  rotate: false
+  xy: 557, 719
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0019
+  rotate: false
+  xy: 335, 2
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0020
+  rotate: false
+  xy: 446, 241
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0021
+  rotate: false
+  xy: 557, 480
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0022
+  rotate: false
+  xy: 668, 719
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0023
+  rotate: false
+  xy: 446, 2
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0024
+  rotate: false
+  xy: 557, 241
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0025
+  rotate: false
+  xy: 668, 480
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0026
+  rotate: false
+  xy: 779, 719
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0027
+  rotate: false
+  xy: 557, 2
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0028
+  rotate: false
+  xy: 668, 241
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0029
+  rotate: false
+  xy: 779, 480
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
+Ball0030
+  rotate: false
+  xy: 890, 719
+  size: 109, 237
+  orig: 109, 237
+  offset: 0, 0
+  index: -1
