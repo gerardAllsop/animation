@@ -9,6 +9,8 @@ import java.util.Map;
 import static java.util.Collections.*;
 
 public class Constants {
+    public static final float WORLD_WIDTH = 640;
+    public static final float WORLD_HEIGHT = 480;
     public static final Color BACKGROUND_COLOR = new Color(0,0,0,1);
     public static final float FRAME_DURATION = 1.0f/15.0f;
     public static final String SIZE = "data/smallSize.png";
