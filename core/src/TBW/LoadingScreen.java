@@ -9,14 +9,15 @@ import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
+import static utility.Constants.WORLD_HEIGHT;
+import static utility.Constants.WORLD_WIDTH;
+
 /**
  * Created by gerard on 12/02/2017
  * Update: Feb/2019
  */
 
 public class LoadingScreen extends ScreenAdapter {
-    private static final float WORLD_WIDTH = 640;
-    private static final float WORLD_HEIGHT = 480;
     private Viewport viewport;
     private OrthographicCamera camera;
     private TBWGame tbwGame;
