@@ -1,7 +1,8 @@
 package utility;
 
 /**
- * Created by gerard on 17/02/2017.
+ * Created by gerard on 17/02/2017
+ *
  */
 
 public enum CurrentDirection {

@@ -26,7 +26,7 @@ import static utility.Constants.WORLD_WIDTH;
  */
 
 public class GameScreenTBW extends ScreenAdapter {
-    private Viewport viewport;
+    private FitViewport viewport;
     private OrthographicCamera camera;
     private SpriteBatch batch;
     private TBWGame tbwGame;
@@ -37,10 +37,8 @@ public class GameScreenTBW extends ScreenAdapter {
 
 
     public GameScreenTBW(TBWGame tbwGame){
-
         this.tbwGame = tbwGame;
         font = new BitmapFont(Gdx.files.internal(Constants.fontPath));
-
     }
 
     @Override
@@ -50,14 +48,15 @@ public class GameScreenTBW extends ScreenAdapter {
         viewport = new FitViewport(WORLD_WIDTH, WORLD_HEIGHT, camera);
         viewport.apply(true);
         batch = new SpriteBatch();
+
         control = new GameControl(camera);
+
         Gdx.input.setInputProcessor(control);
 
         tiledMap = tbwGame.getAssetManager().get("tileData/floorTiles.tmx");
         orthogonalTiledMapRenderer = new
                 OrthogonalTiledMapRenderer(tiledMap, batch);
         orthogonalTiledMapRenderer.setView(camera);
-
     }
 
     @Override
