@@ -9,6 +9,8 @@ import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
+import utility.CameraControl;
+
 import static utility.Constants.WORLD_HEIGHT;
 import static utility.Constants.WORLD_WIDTH;
 
@@ -19,7 +21,6 @@ import static utility.Constants.WORLD_WIDTH;
 
 public class LoadingScreen extends ScreenAdapter {
     private Viewport viewport;
-    private OrthographicCamera camera;
     private TBWGame tbwGame;
 
     public LoadingScreen(TBWGame tbwGame) {
@@ -33,10 +34,7 @@ public class LoadingScreen extends ScreenAdapter {
 
     @Override
     public void show() {
-        camera = new OrthographicCamera();
-        camera.position.set(WORLD_WIDTH / 2, WORLD_HEIGHT / 2, 0);
-        camera.update();
-        viewport = new FitViewport(WORLD_WIDTH, WORLD_HEIGHT, camera);
+        viewport = new FitViewport(WORLD_WIDTH, WORLD_HEIGHT, CameraControl.getInstance().getCamera());
         tbwGame.getAssetManager().load("tileData/floorTiles.tmx", TiledMap.class);
     }
 
