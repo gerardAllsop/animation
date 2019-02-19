@@ -11,29 +11,28 @@ public class GameControl extends Stage {
 
     public GameControl() {
     }
-
+    public void update() {
+        if(mousePressed){
+            CameraControl.getInstance().moveMainCamera();
+        }
+    }
     public String getDisplayMsg(){
         return displayMsg;
     }
+
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-        CameraControl.getInstance().storeMousePress(screenX,screenY);
+        CameraControl.getInstance().storeCameraPos();
         mousePressed=true;
         displayMsg = "Freshly pressed Mouse!";
         return false;
     }
     @Override
-     public boolean touchUp(int screenX, int screenY, int pointer, int button) {
+    public boolean touchUp(int screenX, int screenY, int pointer, int button) {
         displayMsg = "Awaiting mouse activity";
         mousePressed=false;
         return false;
     }
-    public void update() {
-        if(mousePressed){
-            CameraControl.getInstance().update();
-        }
-    }
-
     @Override
     public boolean keyDown(int keycode) {
         return false;
